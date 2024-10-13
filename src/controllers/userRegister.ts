@@ -5,7 +5,7 @@ export const getAllUsers = async (req:any, res:any) => {
     const users = await getUsers();
     res.json(users);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch users' });
+    res.status(500).json({ error: 'Failed to fetch' });
   }
 };
 
@@ -15,6 +15,6 @@ export const createUser = async (req:any, res:any) => {
     const newUser = await addUser({ email, name });
     res.json(newUser);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to create user' });
+    res.status(500).json({ error: 'Failed' });
   }
 };
